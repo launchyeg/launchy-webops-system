@@ -5,6 +5,7 @@ import type { DomainProvider, EmailProvider, HostingProvider } from "@/types";
  * changes — `provider` is stored as plain text on every service row. */
 export const DOMAIN_PROVIDERS: DomainProvider[] = [
   "Hostinger",
+  "Vercel",
   "GoDaddy",
   "Namecheap",
   "HostGator",
@@ -16,6 +17,7 @@ export const DOMAIN_PROVIDERS: DomainProvider[] = [
 
 export const HOSTING_PROVIDERS: HostingProvider[] = [
   "Hostinger",
+  "Vercel",
   "GoDaddy",
   "Namecheap",
   "HostGator",

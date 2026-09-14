@@ -14,6 +14,7 @@ export type ServiceStatus = "active" | "expiring_soon" | "expired";
 
 export type DomainProvider =
   | "Hostinger"
+  | "Vercel"
   | "GoDaddy"
   | "Namecheap"
   | "HostGator"
@@ -24,6 +25,7 @@ export type DomainProvider =
 
 export type HostingProvider =
   | "Hostinger"
+  | "Vercel"
   | "GoDaddy"
   | "Namecheap"
   | "HostGator"
