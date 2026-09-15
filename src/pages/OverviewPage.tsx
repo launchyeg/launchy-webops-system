@@ -502,7 +502,18 @@ export default function OverviewPage() {
                               {daysRemainingLabel(r.renewal.daysRemaining)}
                             </td>
                             <td className="px-5 py-3.5 text-slate-700 dark:text-slate-300">
-                              {formatCurrency(r.annualCost)}/yr
+                              {egpRate !== null ? (
+                                <>
+                                  <p className="font-medium text-slate-900 dark:text-slate-100">
+                                    {formatEgp(r.annualCost * egpRate)}/yr
+                                  </p>
+                                  <p className="text-xs text-slate-400">
+                                    ≈ {formatCurrency(r.annualCost)}/yr
+                                  </p>
+                                </>
+                              ) : (
+                                `${formatCurrency(r.annualCost)}/yr`
+                              )}
                             </td>
                             <td className="px-5 py-3.5">
                               <StatusBadge renewal={r.renewal} />
@@ -546,9 +557,22 @@ export default function OverviewPage() {
                               {daysRemainingLabel(r.renewal.daysRemaining)}
                             </p>
                           </div>
-                          <p className="font-medium text-slate-900 dark:text-slate-100">
-                            {formatCurrency(r.annualCost)}/yr
-                          </p>
+                          <div className="text-right">
+                            {egpRate !== null ? (
+                              <>
+                                <p className="font-medium text-slate-900 dark:text-slate-100">
+                                  {formatEgp(r.annualCost * egpRate)}/yr
+                                </p>
+                                <p className="text-xs text-slate-400">
+                                  ≈ {formatCurrency(r.annualCost)}/yr
+                                </p>
+                              </>
+                            ) : (
+                              <p className="font-medium text-slate-900 dark:text-slate-100">
+                                {formatCurrency(r.annualCost)}/yr
+                              </p>
+                            )}
+                          </div>
                         </div>
                       </div>
                     );
