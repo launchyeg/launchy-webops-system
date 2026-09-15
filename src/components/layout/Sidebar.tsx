@@ -12,12 +12,12 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
       <div className="flex h-16 shrink-0 items-center gap-2.5 border-b border-slate-100 px-5 dark:border-slate-800">
         <img
           src="/bgfavicon.png"
-          alt="launchy"
+          alt="Launchy"
           className="h-9 w-9 rounded-xl"
         />
         <div>
           <p className="text-sm font-bold leading-tight text-slate-900 dark:text-slate-100">
-            launchy
+            Launchy
           </p>
           <p className="text-xs font-medium leading-tight text-slate-400">
             Web OPS
@@ -59,7 +59,7 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-200 text-sm font-semibold text-slate-600 dark:bg-slate-700 dark:text-slate-300">
             <img
               src="/bgfavicon.png"
-              alt="launchy"
+              alt="Launchy"
               className="h-9 w-9 rounded-full"
             />
           </div>

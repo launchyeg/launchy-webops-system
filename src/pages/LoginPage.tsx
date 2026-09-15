@@ -40,11 +40,11 @@ export default function LoginPage() {
         <div className="mb-8 flex flex-col items-center text-center">
           <img
             src="/bgfavicon.png"
-            alt="launchy"
+            alt="Launchy"
             className="h-12 w-12 rounded-xl mb-4"
           />
           <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100">
-            launchy Web OPS
+            Launchy Web OPS
           </h1>
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
             Sign in to manage clients &amp; software services

@@ -407,8 +407,8 @@ function buildEmail(
     (w) => `${byWindow.get(w)!.length} due in ${w}d`,
   );
   const subject = isFallbackSample
-    ? "launchy Web OPS — Test renewal reminder"
-    : `launchy Web OPS — Renewal reminder: ${subjectParts.join(", ")}`;
+    ? "Launchy Web OPS — Test renewal reminder"
+    : `Launchy Web OPS — Renewal reminder: ${subjectParts.join(", ")}`;
 
   const sections = windows
     .map((w) => {
@@ -468,7 +468,7 @@ function buildEmail(
   <div style="font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:640px;margin:0 auto;padding:24px;background:#f8f9fa;">
     <div style="background:#fff;border-radius:12px;overflow:hidden;border:1px solid #eee;">
       <div style="background:#111827;padding:20px 24px;">
-        <span style="color:#fff;font-size:16px;font-weight:700;">launchy Web OPS</span>
+        <span style="color:#fff;font-size:16px;font-weight:700;">Launchy Web OPS</span>
       </div>
       <div style="padding:24px;">
         <h1 style="margin:0 0 8px;font-size:18px;color:#111;">Renewal reminder</h1>
@@ -484,7 +484,7 @@ function buildEmail(
           ${sections}
         </table>
         <p style="margin:24px 0 0;font-size:12px;color:#999;">
-          Sent automatically by launchy Web OPS. Open the app to renew or update any of these services.
+          Sent automatically by Launchy Web OPS. Open the app to renew or update any of these services.
         </p>
       </div>
     </div>

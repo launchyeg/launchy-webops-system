@@ -1,4 +1,4 @@
-# launchy Web OPS
+# Launchy Web OPS
 
 An internal Client & Service Management system for launchy. Track clients,
 domains, hosting accounts, email accounts, renewal dates, annual costs, and
