@@ -363,31 +363,76 @@ export default function OverviewPage() {
               <>
                 <StatCard
                   label="Annual Domain Cost"
-                  value={formatCurrency(financials.annualDomainCost)}
+                  value={
+                    egpRate !== null
+                      ? formatEgp(financials.annualDomainCost * egpRate)
+                      : formatCurrency(financials.annualDomainCost)
+                  }
+                  subtext={
+                    egpRate !== null
+                      ? `≈ ${formatCurrency(financials.annualDomainCost)}`
+                      : undefined
+                  }
                   icon={Globe}
                   index={0}
                 />
                 <StatCard
                   label="Annual Hosting Cost"
-                  value={formatCurrency(financials.annualHostingCost)}
+                  value={
+                    egpRate !== null
+                      ? formatEgp(financials.annualHostingCost * egpRate)
+                      : formatCurrency(financials.annualHostingCost)
+                  }
+                  subtext={
+                    egpRate !== null
+                      ? `≈ ${formatCurrency(financials.annualHostingCost)}`
+                      : undefined
+                  }
                   icon={Server}
                   index={1}
                 />
                 <StatCard
                   label="Annual Email Cost"
-                  value={formatCurrency(financials.annualEmailCost)}
+                  value={
+                    egpRate !== null
+                      ? formatEgp(financials.annualEmailCost * egpRate)
+                      : formatCurrency(financials.annualEmailCost)
+                  }
+                  subtext={
+                    egpRate !== null
+                      ? `≈ ${formatCurrency(financials.annualEmailCost)}`
+                      : undefined
+                  }
                   icon={Mail}
                   index={2}
                 />
                 <StatCard
                   label="Annual Shared Hosting Cost"
-                  value={formatCurrency(financials.annualSharedHostingCost)}
+                  value={
+                    egpRate !== null
+                      ? formatEgp(financials.annualSharedHostingCost * egpRate)
+                      : formatCurrency(financials.annualSharedHostingCost)
+                  }
+                  subtext={
+                    egpRate !== null
+                      ? `≈ ${formatCurrency(financials.annualSharedHostingCost)}`
+                      : undefined
+                  }
                   icon={Share2}
                   index={3}
                 />
                 <StatCard
                   label="Total Annual Cost"
-                  value={formatCurrency(financials.totalAnnualCost)}
+                  value={
+                    egpRate !== null
+                      ? formatEgp(financials.totalAnnualCost * egpRate)
+                      : formatCurrency(financials.totalAnnualCost)
+                  }
+                  subtext={
+                    egpRate !== null
+                      ? `≈ ${formatCurrency(financials.totalAnnualCost)}`
+                      : undefined
+                  }
                   icon={Wallet}
                   tone="emerald"
                   index={4}
@@ -405,7 +450,16 @@ export default function OverviewPage() {
               <>
                 <StatCard
                   label="Upcoming Renewal Expenses (30d)"
-                  value={formatCurrency(financials.upcomingRenewalExpense)}
+                  value={
+                    egpRate !== null
+                      ? formatEgp(financials.upcomingRenewalExpense * egpRate)
+                      : formatCurrency(financials.upcomingRenewalExpense)
+                  }
+                  subtext={
+                    egpRate !== null
+                      ? `≈ ${formatCurrency(financials.upcomingRenewalExpense)}`
+                      : undefined
+                  }
                   icon={DollarSign}
                   tone="amber"
                   index={0}
